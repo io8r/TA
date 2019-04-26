@@ -1,5 +1,9 @@
 <% provide(:title, "Home") %>
 
 	<li><%= link_to "Home", root_path %></li>
- 	<li><%= link_to "Help", help_path %></li>
+ 	<% if logged_in? %> 			
+ 			<li><%= link_to "Logout", logout_path, method: :delete%></li>
+ 		<% else %>
+ 			
+ 	<% end %>
  

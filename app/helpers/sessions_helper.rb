@@ -19,4 +19,10 @@ module SessionsHelper
 		!current_user.nil?
 	end
 
+	#clears user's id, written to the session method and also clears @current_user
+	def log_out
+		session.delete(:user_id)
+		@current_user = nil
+	end
+
 end
